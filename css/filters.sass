@@ -1,0 +1,90 @@
+@charset "utf-8"
+@import "base"
+
+.b-filters__reset
+    color: $color-text-gray
+    position: absolute
+    top: 12px
+    right: 666px
+    text-align: right
+    cursor: pointer
+    &:hover
+        .b-filters__reset-icon
+            color: #ffffff
+            background: #919598
+
+.b-filters__reset-icon
+    padding-top: 2px
+
+.b-filters__reset-title
+    font-size: 12px
+
+.b-filter
+    border-top: 1px solid #c4c8cc
+
+.b-filter__title
+    font-size: 14px
+    font-weight: bold
+    margin: 15px 0 13px 0
+
+.b-filter__title-additional
+    color: $color-text-gray
+    font-weight: normal
+
+.b-filter__range
+    margin-left: 1px
+    position: relative
+    z-index: 2
+
+.b-filter__scale
+    position: relative
+    z-index: 1
+    height: 40px
+    margin-left: 3px
+    left: 5px
+    @include user-select(none)
+
+.b-filter__scale-item
+    float: left
+    font-style: normal
+    width: 12.5%
+    text-align: right
+    font-size: 11px
+    line-height: 14px
+    position: relative
+    top: 10px
+    color: $color-text-gray
+
+    &:first-child
+        width: 0
+        text-indent: -10px
+        + .b-filter__scale-item
+            &:after
+                visibility: hidden
+        &:after
+            visibility: hidden
+
+    &:after
+        content: ""
+        display: block
+        width: 1px
+        height: 13px
+        background: rgba(0, 0, 0, 0.2)
+        overflow: hidden
+        position: absolute
+        top: -23px
+        left: -6px
+
+.b-filter__list
+    margin: -3px 0 9px 1px
+
+.b-filter__list-item
+    padding-bottom: 6px
+
+.b-filter__list-checkbox
+    margin-right: 5px
+
+.b-filter__list-count
+    color: $color-text-gray
+    padding-left: 3px
+

@@ -1,0 +1,74 @@
+@charset "utf-8"
+@import "base"
+
+.b-header
+    height: 50px
+    position: relative
+    z-index: 5
+
+.b-header__logo
+    position: absolute
+    top: 16px
+    left: 30px
+
+.b-header__logo-img
+    width: 135px
+
+.b-header__new-search
+    position: absolute
+    top: 11px
+    left: 195px
+    height: 28px
+    line-height: 28px
+    padding: 0 12px
+    color: $color-text-gray
+    &:hover,
+    &:active
+        color: $color-text-gray
+
+.b-header__nav
+    position: absolute
+    top: 13px
+    right: 30px
+
+.b-header__nav-li
+    float: right
+    margin-left: 10px
+
+.b-header__help
+    padding-top: 3px
+
+.b-header__help-icon
+    position: relative
+    top: -1px
+
+.b-header__user-button
+    display: inline-block
+    font-size: 12px
+    padding-top: 1px
+    line-height: 19px
+    padding: 0 6px 0 8px
+    color: $color-text-gray
+    &:hover,
+    &:active
+        color: $color-text-gray
+
+.b-header__user-dropdown
+    margin-top: -2px
+    z-index: 1
+    right: 0
+    padding-bottom: 1px
+    font-size: 12px
+
+.b-header__user-name
+    white-space: nowrap
+    padding: 5px 12px 0 10px
+    max-width: 350px
+    text-overflow: ellipsis
+    
+.b-header__user-company
+    white-space: nowrap
+    padding: 0 12px 4px 10px
+    color: $color-text-gray
+    max-width: 350px
+    text-overflow: ellipsis

@@ -1,0 +1,42 @@
+@charset "utf-8"
+@import "base"
+
+.b-big-photo
+    position: absolute
+    z-index: 10
+
+.b-big-photo__outer
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 250px
+    height: 250px
+    margin: -125px 0 0 -125px
+    padding: 10px
+    background: #ffffff
+    border: 1px solid #b6bcc2
+    border-radius: 3px
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18)
+    z-index: 2
+
+.b-big-photo__bg
+    background: rgba(255,255,255,.45)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1
+
+.b-big-photo__img
+    height: 100%
+    margin: 0 auto
+
+.b-big-photo__close
+    position: absolute
+    right: 10px
+    top: 10px
+    padding-top: 3px
+    width: 18px
+    height: 18px
+    box-shadow: 0 0 0 4px #ffffff

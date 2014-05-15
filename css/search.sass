@@ -1,0 +1,84 @@
+@charset "utf-8"
+@import "base"
+
+.b-search
+    padding: 40px 30px 30px 30px
+    position: relative
+
+.b-search__count
+    position: absolute
+    left: 31px
+    top: 12px
+    font-size: 14px
+
+.b-search__filters
+    float: left
+    width: 300px
+
+.b-search__results
+    float: left
+    margin-left: 30px
+    width: 610px
+    min-height: 200px
+
+.b-search__more-button
+    line-height: 40px
+    width: 100%
+
+.b-search__pagination
+    text-align: center
+    margin-top: 20px
+
+.b-search__pagination-item
+    display: inline-block
+    padding: 1px 7px 0 7px
+    line-height: 26px
+    border-radius: 0
+    margin-left: -5px
+    min-width: 30px
+    text-align: center
+    font-size: 13px
+    &:hover
+        position: relative
+
+.b-search__pagination-item_current,
+.b-search__pagination-item_current:hover,
+.b-search__pagination-item_current:active
+    position: relative
+    border: 1px solid rgba(0,0,0,.25)
+    border-bottom-color: rgba(0,0,0,.15)
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)
+    @include linear-gradient(#e4e5e7, #e4e5e7)
+
+.b-search__pagination_placeholder
+    border-style: solid
+    border-color: #c0c6cc
+    border-width: 1px 0
+    cursor: default
+
+.b-search__pagination_disabled
+    background: #fff
+    box-shadow: none
+    color: rgba(0,0,0,.35)
+
+.b-search__pagination-prev
+    border-radius: 2px 0 0 2px
+
+.b-search__pagination-next
+    border-radius: 0 2px 2px 0
+
+.b-search__divider
+    border-top: 1px solid #c0c6cc
+    color: $color-text-gray
+    text-align: center
+    background: #ffffff
+    height: 1px
+    font-size: 13px
+    margin: 40px 0
+
+.b-search__divider-inner
+    display: inline-block
+    background: #ffffff
+    padding: 0 12px
+    position: relative
+    top: -10px

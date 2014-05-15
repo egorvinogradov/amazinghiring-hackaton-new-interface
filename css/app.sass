@@ -1,0 +1,69 @@
+@charset "utf-8"
+@import "base"
+
+.b-app
+    font-size: 14px
+    line-height: 18px
+    overflow-y: scroll
+
+.b-app_no-scroll
+    overflow-y: hidden
+
+.b-app__outer
+    background: #e4e5e7
+    min-height: 100%
+    padding-bottom: 20px
+    box-sizing: border-box
+
+.b-app__body
+    background: #ffffff
+    box-shadow: 0 2px 3px rgba(0,0,0,.05)
+    border-radius: 12px
+    position: relative
+
+.b-app__body-title
+    border-bottom: 1px solid #e4e5e7
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05)
+    height: 60px
+    overflow: hidden
+    @include transition(height, 300ms)
+
+.b-app__body-title_collapsed
+    height: 0
+
+.b-app__body-title-text
+    float: left
+    padding: 20px 0 0 30px
+    font-size: 18px
+    font-weight: normal
+    line-height: 22px
+
+.b-app__body-title-side
+    float: right
+    padding: 18px 30px 0 0
+
+.b-app__body-title-history
+    line-height: 19px
+    font-size: 14px
+    padding: 2px 8px
+    color: $color-text-gray
+
+.b-app__body-title-history-icon
+    color: $color-text-gray
+    vertical-align: text-top
+    margin: 1px 3px 0 0
+    font-size: 13px
+
+.b-app__body-title-history-count
+    font-size: 12px
+    letter-spacing: 1px
+    padding: 1px 4px 0 4px
+    margin: 0 2px
+
+.b-app__body-spinner
+    background: rgba(255,255,255,.4)
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: 10
+    border-radius: 12px

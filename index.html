@@ -1,0 +1,2423 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AmazingHiring</title>
+        <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/jqueryui/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/ui.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/filters.css">
+        <link rel="stylesheet" href="css/profile.css">
+        <link rel="stylesheet" href="css/big-photo.css">
+    </head>
+    <body class="b-body b-app">
+
+        <div class="b-app__outer">
+
+            <div class="b-container m-block-center">
+
+                <header class="b-header">
+                    <div class="b-header__logo">
+                        <a class="b-header__logo-a" href="/">
+                            <img class="b-header__logo-img" src="img/logo.svg" alt="AmazingHiring">
+                        </a>
+                    </div>
+                    <a class="b-header__new-search b-button" href="/">
+                        Новый поиск
+                    </a>
+                    <nav class="b-header__nav">
+                        <ul class="b-header__nav-ul clearfix">
+                            <li class="b-header__nav-li b-header__help">
+                                <a class="b-header__help-icon b-icon-round b-icon-round_inverted b-title" href="#" title="Помощь" data-toggle="tooltip" data-placement="right">?</a>
+                            </li>
+                            <li class="b-header__nav-li b-header__user b-dropdown">
+                                <span class="b-header__user-button b-button b-dropdown__title">
+                                    Аккаунт
+                                    <span class="caret"></span>
+                                </span>
+                                <div class="b-header__user-dropdown b-dropdown__block b-dropdown__block_right m-hidden">
+                                    <div class="b-header__user-name">Егор Виноградов</div>
+                                    <div class="b-header__user-company">AmazingHiring</div>
+                                    <ul class="b-header__user-actions b-header__user-icon b-dropdown__list">
+                                        <li class="b-header__user-action b-dropdown__item b-dropdown__item_separate">
+                                            <a class="b-header__user-action-a b-dropdown__item-inner" href="#">
+                                                Настройки
+                                            </a>
+                                        </li>
+                                        <li class="b-header__user-action b-dropdown__item">
+                                            <a class="b-header__user-action-a b-dropdown__item-inner" href="#">
+                                                Выход
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+            </div>
+
+            <div class="b-app__body b-container m-block-center">
+
+                <div class="b-app__body-spinner m-hidden"></div>
+
+                <div class="b-app__body-title clearfix b-app__body-title_collapsed-">
+                    <h2 class="b-app__body-title-text">Поиск</h2>
+                    <div class="b-app__body-title-side">
+                        <button class="b-app__body-title-history b-button">
+                            <i class="b-app__body-title-history-icon glyphicon glyphicon-repeat"></i>
+                            История запросов
+                            <span class="b-app__body-title-history-count b-badge">12</span>
+                            <span class="caret"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="b-app__body-container">
+
+                    <div class="b-form clearfix b-form_collapsed-">
+
+                        <div class="b-form__field b-field-large">
+
+                            <div class="b-form__query" data-and="и">
+
+                            <div class="b-form__key b-dropdown">
+
+                                <span class="b-form__key-title b-button b-dropdown__title">
+                                    <span class="b-form__key-title-inner">
+                                        Ключевое слово
+                                    </span>
+                                    <span class="caret"></span>
+                                </span>
+
+                                <div class="b-form__key-dropdown b-dropdown__block m-hidden">
+                                    <ul class="b-dropdown__list">
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Ключевое слово
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Компания
+                                            </span>
+                                            <span class="b-form__key-switcher b-switcher" data-value="off">
+                                                <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_off">любая</span>
+                                                <span class="b-switcher__control">
+                                                    <span class="b-switcher__inner"></span>
+                                                </span>
+                                                <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_on">текущая</span>
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Навык
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Должность
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Местоположение
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Образование
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-dropdown-item b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                Имя или никнейм
+                                            </span>
+                                        </li>
+                                        <li class="b-form__key-exclude b-form__key-dropdown-item b-dropdown__item b-dropdown__item_separate">
+                                            <label>
+                                                <span class="b-form__key-exclude-inner b-checkbox">
+                                                    <input class="b-form__key-exclude-checkbox b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Исключить из поиска
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="b-form__values">
+
+                                <div class="b-form__value" data-or="или">
+
+                                    <span class="b-form__value-input-outer">
+                                        <span class="b-form__value-input_fake"></span>
+                                        <input class="b-form__value-input" value="javascript">
+
+                                        <span class="b-form__value-input-remove-outer">
+                                            <span class="b-form__value-remove">
+                                                <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                        <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
+                                        <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                            <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                            <li class="b-dropdown__item b-dropdown__item_title">
+                                                <span class="b-dropdown__item-inner">
+                                                    Синонимы
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    python
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    java
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    c++
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+
+                                    <ul class="b-form__value-suggest b-dropdown__block m-hidden">
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                javascript
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                python
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                java
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                c++
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-form__value" data-or="или">
+
+                                    <span class="b-form__value-input-outer">
+                                        <span class="b-form__value-input_fake"></span>
+                                        <input class="b-form__value-input" value="python">
+
+                                        <span class="b-form__value-input-remove-outer">
+                                            <span class="b-form__value-remove">
+                                                <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                            </span>
+                                        </span>
+                                    </span>
+
+                                    <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                        <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
+                                        <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                            <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                            <li class="b-dropdown__item b-dropdown__item_title">
+                                                <span class="b-dropdown__item-inner">
+                                                    Синонимы
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    python
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    java
+                                                </span>
+                                            </li>
+                                            <li class="b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    c++
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </span>
+
+                                    <ul class="b-form__value-suggest b-dropdown__block m-hidden">
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                javascript
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                python
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                java
+                                            </span>
+                                        </li>
+                                        <li class="b-dropdown__item">
+                                            <span class="b-dropdown__item-inner">
+                                                c++
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <span class="b-form__values-add">+</span>
+
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
+                        <button class="b-form__find_small b-button">Найти</button>
+                        <button class="b-form__find b-button-green">Найти</button>
+
+                    </div>
+
+
+                    <div class="b-search clearfix m-hidden">
+
+                        <div class="b-search__count">
+                            <b>176</b> кандидатов
+                        </div>
+
+                        <div class="b-search__filters">
+
+                            <div class="b-filters">
+
+                                <div class="b-filters__reset">
+                                    <span class="b-filters__reset-title">сбросить фильтры</span>
+                                    <span class="b-filters__reset-icon b-icon-round">&times;</span>
+                                </div>
+
+                                <div class="b-filter b-filter_range">
+                                    <div class="b-filter__title">
+                                        Возраст
+                                        <span class="b-filter__title-additional">(лет)</span>
+                                    </div>
+                                    <div class="b-filter__range"></div>
+                                    <div class="b-filter__scale clearfix">
+                                        <i class="b-filter__scale-item">20</i>
+                                        <i class="b-filter__scale-item">25</i>
+                                        <i class="b-filter__scale-item">30</i>
+                                        <i class="b-filter__scale-item">35</i>
+                                        <i class="b-filter__scale-item">40</i>
+                                        <i class="b-filter__scale-item">45</i>
+                                        <i class="b-filter__scale-item">50</i>
+                                        <i class="b-filter__scale-item">55</i>
+                                        <i class="b-filter__scale-item">60</i>
+                                    </div>
+                                </div>
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Пол
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Мужчина
+                                                <span class="b-filter__list-count">(156)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Женщина
+                                                <span class="b-filter__list-count">(58)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_range">
+                                    <div class="b-filter__title">
+                                        Опыт работы
+                                        <span class="b-filter__title-additional">(лет)</span>
+                                    </div>
+                                    <div class="b-filter__range"></div>
+                                    <div class="b-filter__scale clearfix">
+                                        <i class="b-filter__scale-item">1</i>
+                                        <i class="b-filter__scale-item">2</i>
+                                        <i class="b-filter__scale-item">3</i>
+                                        <i class="b-filter__scale-item">4</i>
+                                        <i class="b-filter__scale-item">5</i>
+                                        <i class="b-filter__scale-item">6</i>
+                                        <i class="b-filter__scale-item">7</i>
+                                        <i class="b-filter__scale-item">8</i>
+                                        <i class="b-filter__scale-item">10+</i>
+                                    </div>
+                                </div>
+
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Аккаунты на сайтах
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Linkedin
+                                                <span class="b-filter__list-count">(1164)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Мой круг
+                                                <span class="b-filter__list-count">(690)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Github
+                                                <span class="b-filter__list-count">(634)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Google+
+                                                <span class="b-filter__list-count">(576)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Gravatar
+                                                <span class="b-filter__list-count">(314)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                StackOverflow
+                                                <span class="b-filter__list-count">(112)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Способы связи
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                E-mail
+                                                <span class="b-filter__list-count">(207)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Skype
+                                                <span class="b-filter__list-count">(112)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox" checked>
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Телефон
+                                                <span class="b-filter__list-count">(73)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                ICQ
+                                                <span class="b-filter__list-count">(46)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_range">
+                                    <div class="b-filter__title">
+                                        Продолжительность работы на <br>
+                                        последнем месте
+                                        <span class="b-filter__title-additional">(месяцев)</span>
+                                    </div>
+                                    <div class="b-filter__range"></div>
+                                    <div class="b-filter__scale clearfix">
+                                        <i class="b-filter__scale-item">3</i>
+                                        <i class="b-filter__scale-item">6</i>
+                                        <i class="b-filter__scale-item">9</i>
+                                        <i class="b-filter__scale-item">12</i>
+                                        <i class="b-filter__scale-item">1г</i>
+                                        <i class="b-filter__scale-item">2г</i>
+                                        <i class="b-filter__scale-item">3г</i>
+                                        <i class="b-filter__scale-item">4г</i>
+                                        <i class="b-filter__scale-item">5+</i>
+                                    </div>
+                                </div>
+
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Место работы
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Яндекс
+                                                <span class="b-filter__list-count">(132)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Freelance
+                                                <span class="b-filter__list-count">(101)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                EPAM Systems
+                                                <span class="b-filter__list-count">(87)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Luxoft
+                                                <span class="b-filter__list-count">(65)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Mail.Ru
+                                                <span class="b-filter__list-count">(34)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Grid dynamics consulting
+                                                <span class="b-filter__list-count">(12)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Образование
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                МГУ
+                                                <span class="b-filter__list-count">(66)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                СПбГУ
+                                                <span class="b-filter__list-count">(62)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                СПбГПУ
+                                                <span class="b-filter__list-count">(58)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                НГУ (Новосибирск)
+                                                <span class="b-filter__list-count">(46)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                СПбГУ ИТМО
+                                                <span class="b-filter__list-count">(32)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Местоположение
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Россия
+                                                <span class="b-filter__list-count">(1524)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Московская область
+                                                <span class="b-filter__list-count">(877)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Москва
+                                                <span class="b-filter__list-count">(615)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Ленинградская область
+                                                <span class="b-filter__list-count">(314)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Санкт-Петербург
+                                                <span class="b-filter__list-count">(291)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Украина
+                                                <span class="b-filter__list-count">(207)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="b-filter b-filter_options">
+
+                                    <div class="b-filter__title">
+                                        Текущая компания
+                                    </div>
+
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Мужчина
+                                                <span class="b-filter__list-count">(156)</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__list-item">
+                                            <label class="b-filter__list-label">
+                                                <span class="b-filter__list-checkbox b-checkbox">
+                                                    <input class="b-checkbox__input" type="checkbox">
+                                                    <span class="b-checkbox__placeholder"></span>
+                                                </span>
+                                                Женщина
+                                                <span class="b-filter__list-count">(58)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b-search__results">
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/470245828/portrait.png?modified=1381947942')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Олег Ефимов
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/890847157/portrait.png?modified=1384780786')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Константин Китманов
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/81162961/portrait.png?modified=1383303648')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Вадим Макеев
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/296602631/portrait.png?modified=1392301876')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Филипп Ковалев
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/137427633/portrait.png?modified=1388259329')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Акжан Абдулин
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Михаил Давыдов
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/699122115/portrait.png?modified=1385371289')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Владимир Цванг
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/607294789/portrait.png?modified=1375600810')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Александр Семёнов
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/11740124/portrait.png?modified=1392572130')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Андрей Дягель
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-profile b-profile-short">
+
+                                <div class="b-profile__short-side">
+                                    <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/122530861/portrait.png?modified=1394183214')"></div>
+                                </div>
+
+                                <div class="b-profile__short-main">
+
+                                    <div class="b-profile__name">
+                                        Софья Ильинова
+                                        <span class="b-profile__age">
+                                            <span class="b-profile__age-approximate">~</span>
+                                            30 лет
+                                            <span class="b-profile__age-dropdown b-dropdown">
+                                                <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                                <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                    <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                    <div class="b-profile__age-dropdown-text">
+                                                        Возраст вычислен<br>
+                                                        на основании года<br>
+                                                        окончания вуза
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                    <div class="b-profile__location">Москва, Россия</div>
+
+                                    <div class="b-profile__short-position">Веб-разработчик, Яндекс</div>
+
+                                    <div class="b-profile__short-experience">
+                                        <span class="b-profile__short-experience-title">Ранее:</span>
+                                        CharterCenter, Oberon Media, Nord Capital
+                                        и еще
+                                        <span class="b-profile__short-experience-dropdown b-dropdown b-dropdown_static">
+                                            <span class="b-link b-dropdown__title">2 компании</span>
+                                            <div class="b-profile__short-experience-dropdown-block b-dropdown__block m-hidden">
+                                                <ul class="b-dropdown__list">
+                                                    <li class="b-dropdown__corner b-dropdown__corner_center"></li>
+                                                    <li class="b-dropdown__item_title">
+                                                        <span class="b-dropdown__item-inner">Компании</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">Astrosoft</span>
+                                                    </li>
+                                                    <li class="b-dropdown__item">
+                                                        <span class="b-dropdown__item-inner">EvilMartians</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="b-profile__short-skills">
+                                        Python, Javascript, Linux, Ruby, Devops, SQL
+                                    </div>
+                                    <div class="b-profile__short-education b-title" title="Санкт-Петербургский государственный политехнический университет">
+                                        СПбГПУ
+                                    </div>
+
+                                    <ul class="b-profile__links b-profile__links_short">
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="b-profile__links-item b-profile__links-item_hidden">
+                                            <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                        </li>
+
+                                        <li class="b-profile__links-item">
+                                            <span class="b-profile__links-more b-link">5+</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="b-profile__short-buttons">
+                                        <button class="b-profile__short-button b-profile__short-button_preview b-button">
+                                            Превью
+                                        </button>
+                                        <button class="b-profile__short-button b-profile__short-button_open b-button-green">
+                                            Открыть
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="b-search__more">
+                                <button class="b-search__more-button b-button">Показать еще 50</button>
+                            </div>
+
+                            <ul class="b-search__pagination">
+                                <li class="b-search__pagination-item b-search__pagination-prev b-button b-search__pagination_disabled">&larr;</li>
+                                <li class="b-search__pagination-item b-search__pagination-item_number b-button b-search__pagination-item_current">1</li>
+                                <li class="b-search__pagination-item b-search__pagination-item_number b-button">2</li>
+                                <li class="b-search__pagination-item b-search__pagination-item_number b-button">3</li>
+                                <li class="b-search__pagination-item b-search__pagination-item_number b-button">4</li>
+                                <li class="b-search__pagination-item b-search__pagination_placeholder">...</li>
+                                <li class="b-search__pagination-item b-search__pagination-item_number b-button">207</li>
+                                <li class="b-search__pagination-item b-search__pagination-next b-button">&rarr;</li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="b-big-photo m-hidden">
+            <div class="b-big-photo__bg"></div>
+            <div class="b-big-photo__outer">
+                <img class="b-big-photo__img" src="http://moikrug.ru/avatar/mk-p/470245828/portrait.png?modified=1381947942">
+                <i class="b-big-photo__close b-icon-round b-icon-round_inverted">&times;</i>
+            </div>
+        </div>
+
+        <div class="b-profile b-profile-preview m-hidden">
+            <div class="b-profile-preview__bg"></div>
+            <div class="b-profile-preview__container clearfix">
+                <span class="b-profile-preview__close">
+                    закрыть
+                    <i class="b-profile-preview__close-icon b-icon-round -b-icon-round_inverted">&times;</i>
+                </span>
+
+                    <div class="b-profile__main">
+
+                        <div class="b-profile__summary">
+
+                            <div class="b-profile__summary-side">
+                                <div class="b-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/122530861/portrait.png?modified=1394183214')"></div>
+                            </div>
+
+                            <div class="b-profile__summary-main">
+
+                                <div class="b-profile__name">
+                                    <span class="b-profile__name_temp_inner"><!-- TODO: remove -->
+                                        Софья Ильинова
+                                    </span>
+                                    <span class="b-profile__age">
+                                        <span class="b-profile__age-approximate">~</span>
+                                        30 лет
+                                        <span class="b-profile__age-dropdown b-dropdown">
+                                            <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                            <div class="b-profile__age-dropdown-block b-dropdown__block m-hidden">
+                                                <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                <div class="b-profile__age-dropdown-text">
+                                                    Возраст вычислен<br>
+                                                    на основании года<br>
+                                                    окончания вуза
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </div>
+
+                                <div class="b-profile__location">Москва, Россия</div>
+
+                                <div class="b-profile__position">
+                                    Веб-разработчик, Яндекс
+                                </div>
+
+                                <dl class="b-profile__contacts">
+                                    <dt class="b-profile__contacts-title">Телефон</dt>
+                                    <dd class="b-profile__contacts-contact">
+                                        есть на
+                                        <a class="b-link" href="#">BrainStorage</a>
+                                        (виден после авторизации)
+                                        <span class="b-profile__contacts-dropdown b-dropdown">
+                                            <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                            <div class="b-profile__contacts-dropdown-block b-dropdown__block m-hidden">
+                                                <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                <div class="b-profile__contacts-dropdown-text">
+                                                    Мы не можем опубликовать телефон<br>
+                                                    из-за политики конфиденциальности <br>
+                                                    BrainStorage<br>
+
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </dd>
+                                    <dt class="b-profile__contacts-title">E-mail</dt>
+                                    <dd class="b-profile__contacts-contact">
+                                        <span class="b-link-" href="#">topcoder031982@gmail.com</span>
+                                        <span class="b-profile__contacts-dropdown b-dropdown">
+                                            <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                            <div class="b-profile__contacts-dropdown-block b-dropdown__block m-hidden">
+                                                <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                <div class="b-profile__contacts-dropdown-text">
+                                                    Взят с
+                                                    <a class="b-link" href="#">Gravatar</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </dd>
+                                    <dt class="b-profile__contacts-title">Skype</dt>
+                                    <dd class="b-profile__contacts-contact">
+                                        <span class="b-link-" href="#">hygaise046323</span>
+                                        <span class="b-profile__contacts-dropdown b-dropdown">
+                                            <i class="b-icon-round b-icon-round_light b-dropdown__title">?</i>
+                                            <div class="b-profile__contacts-dropdown-block b-dropdown__block m-hidden">
+                                                <i class="b-dropdown__corner b-dropdown__corner_left"></i>
+                                                <div class="b-profile__contacts-dropdown-text">
+                                                    Взят с
+                                                    <a class="b-link" href="#">Linkedin</a>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </dd>
+                                </dl>
+
+                                <ul class="b-profile__links">
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_linkedin" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_github" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_habrahabr" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_googleplus" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_livejournal" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_gravatar" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_brainstorage" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_dribbble" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_foursquare" href="#" target="_blank"></a>
+                                    </li>
+                                    <li class="b-profile__links-item">
+                                        <a class="b-profile__links-link b-icon-site b-icon-site_blogger" href="#" target="_blank"></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                        <div class="b-profile__details">
+
+
+                            <div class="b-profile__details-block">
+                                <div class="b-profile__details-block-name">Навыки</div>
+
+                                <ul class="b-profile__skills">
+
+                                    <li class="b-profile__skills-item clearfix">
+                                        <span class="b-profile__skills-rating">
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                        </span>
+                                        <span class="b-profile__skills-name">Python</span>
+                                        <span class="b-profile__skills-details">
+                                            flask, wsgi, sqlalchemy, django
+                                        </span>
+                                    </li>
+                                    <li class="b-profile__skills-item clearfix">
+                                        <span class="b-profile__skills-rating">
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty glyphicon glyphicon-star"></i>
+                                        </span>
+                                        <span class="b-profile__skills-name">Javascript</span>
+                                        <span class="b-profile__skills-details">
+                                            node.js, coffeescript
+                                        </span>
+                                    </li>
+                                    <li class="b-profile__skills-item clearfix">
+                                        <span class="b-profile__skills-rating">
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty glyphicon glyphicon-star"></i>
+                                        </span>
+                                        <span class="b-profile__skills-name">Ruby</span>
+                                        <span class="b-profile__skills-details">
+                                            ruby-on-rails, ruby on rails, eventmachine
+                                        </span>
+                                    </li>
+                                    <li class="b-profile__skills-item clearfix">
+                                        <span class="b-profile__skills-rating">
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty glyphicon glyphicon-star"></i>
+                                            <i class="b-profile__skills-rating-star_empty  glyphicon glyphicon-star"></i>
+                                        </span>
+                                        <span class="b-profile__skills-name">Devops</span>
+                                        <span class="b-profile__skills-details">
+                                            nginx, centos
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="b-profile__experience">
+                                <div class="b-profile__details-block">
+                                    <div class="b-profile__experience-period b-profile__details-block-name">1 год 10 месяцев</div>
+                                    <div class="b-profile__experience-company">Badoo</div>
+                                    <div class="b-profile__experience-position">JavaScript Developer</div>
+                                    <div class="b-profile__experience-time">C июля 2012</div>
+                                </div>
+                                <div class="b-profile__details-block">
+                                    <div class="b-profile__experience-period b-profile__details-block-name">1 год 2 месяца</div>
+                                    <div class="b-profile__experience-company">Mail.Ru</div>
+                                    <div class="b-profile__experience-position">Веб-технолог</div>
+                                    <div class="b-profile__experience-time">Август 2011 — июль 2012</div>
+                                </div>
+                                <div class="b-profile__details-block">
+                                    <div class="b-profile__experience-period b-profile__details-block-name">3 года 9 месяцев</div>
+                                    <div class="b-profile__experience-company">GeneGo Inc.</div>
+                                    <div class="b-profile__experience-position">JavaScript-программист</div>
+                                    <div class="b-profile__experience-time">Август 2006 — май 2010</div>
+                                </div>
+                                <div class="b-profile__details-block">
+                                    <div class="b-profile__experience-period b-profile__details-block-name">1 год 1 месяц</div>
+                                    <div class="b-profile__experience-company">ibox.ru</div>
+                                    <div class="b-profile__experience-position">PHP-программист</div>
+                                    <div class="b-profile__experience-time">Июль 2005 — август 2006</div>
+                                </div>
+                            </div>
+
+                            <div class="b-profile__education">
+                                <div class="b-profile__details-block">
+                                    <div class="b-profile__education-company">
+                                        Московская финансово-промышленная академия
+                                    </div>
+                                    <div class="b-profile__education-position">Специалист</div>
+                                    <div class="b-profile__education-time">2003 — 2009</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="b-profile__side">
+
+                        <div class="b-profile__add-comment clearfix">
+                            <textarea class="b-profile__add-comment-textarea b-field" placeholder="Добавить комментарий"></textarea>
+                            <button class="b-profile__add-comment-button b-button">Добавить комментарий</button>
+                        </div>
+
+                        <ul class="b-profile__comments">
+                            <li class="b-profile__comments-item">
+                                <div class="b-profile__comments-name">
+                                    Алексей Иванов
+                                    <div class="b-profile__comments-date">16 марта</div>
+                                    <div class="b-profile__comments-dropdown b-dropdown">
+                                        <span class="b-profile__comments-dropdown-title b-dropdown__title caret"></span>
+                                        <div class="b-profile__comments-dropdown-block b-dropdown__block m-hidden">
+                                            <ul class="b-dropdown__list">
+                                                <li class="b-dropdown__corner b-dropdown__corner_right"></li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Изменить</span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Удалить</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-profile__comments-text">
+                                    Общались сегодня по телефону. Сказал, пока работу не ищет, но,
+                                    возможно, будет в начале лета. В целом, впечатление хорошее.
+                                    Договорились созвониться через пару месяцев.
+                                </div>
+                            </li>
+                            <li class="b-profile__comments-more">
+                                <button class="b-profile__comments-more-button b-button">
+                                    Другие комментарии
+                                    <span class="b-profile__comments-more-badge b-badge">2</span>
+                                </button>
+                            </li>
+                            <li class="b-profile__comments-item b-profile__comments-item_hidden">
+                                <div class="b-profile__comments-name">
+                                    Юлия Петрова
+                                    <div class="b-profile__comments-date">20 сентября 2013</div>
+                                    <div class="b-profile__comments-dropdown b-dropdown">
+                                        <span class="b-profile__comments-dropdown-title b-dropdown__title caret"></span>
+                                        <div class="b-profile__comments-dropdown-block b-dropdown__block m-hidden">
+                                            <ul class="b-dropdown__list">
+                                                <li class="b-dropdown__corner b-dropdown__corner_right"></li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Изменить</span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Удалить</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-profile__comments-text">
+                                    Списавались в Linkedin. Сказал, недавно сменил
+                                    работу, и новую не ищет. Попросила порекомендовать
+                                    коллег, но пока не ответил.
+                                </div>
+                            </li>
+                            <li class="b-profile__comments-item b-profile__comments-item_hidden">
+                                <div class="b-profile__comments-name">
+                                    Дарья Смирнова
+                                    <div class="b-profile__comments-date">8 июля 2010</div>
+                                    <div class="b-profile__comments-dropdown b-dropdown">
+                                        <span class="b-profile__comments-dropdown-title b-dropdown__title caret"></span>
+                                        <div class="b-profile__comments-dropdown-block b-dropdown__block m-hidden">
+                                            <ul class="b-dropdown__list">
+                                                <li class="b-dropdown__corner b-dropdown__corner_right"></li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Изменить</span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">Удалить</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-profile__comments-text">
+                                    Написала на почту, но ответил, что работу не ищет
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.core.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.widget.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.mouse.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.position.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.autocomplete.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.menu.js"></script>
+        <script type="text/javascript" src="bower_components/jqueryui/ui/jquery.ui.slider.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+        <script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+    </body>
+</html>

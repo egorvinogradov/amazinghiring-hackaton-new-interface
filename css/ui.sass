@@ -1,0 +1,448 @@
+@charset "utf-8"
+@import "base"
+
+html, body, h1, h2, h3, h4, h5, h6, p, form, ul, ol, li, label
+    padding: 0
+    margin: 0
+
+html, body
+    height: 100%
+
+body,
+input,
+textarea,
+button
+    font-family: $font-default
+    color: $color-text
+
+ul, ol
+    list-style-type: none
+
+a,
+.b-link
+    color: $color-a
+    text-decoration: none
+    cursor: pointer
+    &:hover
+        color: $color-a-hover
+        text-decoration: none
+    &:active
+        color: $color-a-active
+        text-decoration: none
+
+label
+    font-weight: normal
+
+
+.b-container
+    max-width: $width-app
+
+.m-hidden
+    display: none !important
+
+.m-block-center
+    margin-left: auto
+    margin-right: auto
+    display: block
+
+.b-button
+    display: inline-block
+    padding: 0 5px
+    border: 1px solid #c0c6cc
+    cursor: pointer
+    color: $color-button
+    border-radius: 3px
+    box-shadow: 0 1px 1px rgba(0, 0 , 0, 0.07)
+    @include linear-gradient(#ffffff, #fafafa)
+    &:hover
+        color: $color-button
+        border-color: #b6bcc2
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12)
+        @include linear-gradient(#faf9f9, #e4e5e8)
+    &:active
+        color: $color-button
+        border-color: #b6bcc2
+        outline: none
+        box-shadow: none
+        @include linear-gradient(#f0eff0, #dcdddf)
+    &:focus
+        outline: none
+
+.b-button-green
+    color: #ffffff
+    border-radius: 3px
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
+    background: #1ebba6
+    border: 1px solid #14a08c
+    border-bottom-color: #0f9687
+    box-shadow: 0 2px 2px rgba(15, 150, 135, 0.4), inset 0 1px 0 rgba(255, 255, 255, .35)
+
+    &:hover
+        background: #15a78f
+        box-shadow: 0 2px 2px rgba(15, 150, 135, 0.3), inset 0 1px 0 rgba(255, 255, 255, .25)
+
+    &:active
+        border-color: #0d6e5f
+        background: #0e9078
+        box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.25)
+
+    &:focus
+        outline: none
+
+.b-dropdown
+    position: relative
+
+.b-dropdown__title
+    @include user-select(none)
+
+.b-dropdown__block
+    position: absolute
+    background: #ffffff
+    border: 1px solid #b6bcc2
+    border-radius: 3px
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18)
+    &.b-dropdown__block_left
+        border-top-left-radius: 0
+    &.b-dropdown__block_right
+        border-top-right-radius: 0
+
+.b-dropdown__item-inner
+    display: block
+    padding: 3px 10px 2px 10px
+    color: $color-text
+    cursor: pointer
+    &:hover
+        color: $color-text
+        background: #f5f5fa
+    &:active
+        color: $color-text
+
+.b-dropdown_static
+    .b-dropdown__item-inner
+        cursor: default
+        &:hover
+            background: none
+
+.b-dropdown__item_separate
+    border-top: 1px solid #dcdce1
+
+.b-dropdown__item_title
+    font-weight: bold
+    border-bottom: 1px solid #dcdce1
+
+.b-dropdown__corner
+    width: 12px
+    height: 12px
+    display: block
+    position: absolute
+    border-style: solid
+    border-color: #b6bcc2
+    border-width: 1px 0 0 1px
+    margin-top: -7px
+    background: #ffffff
+    @include transform(rotate(45deg))
+
+.b-dropdown__corner_left
+    left: 12px
+
+.b-dropdown__corner_right
+    right: 12px
+
+.b-dropdown__corner_center
+    left: 50%
+    margin-left: -7px
+
+.b-field-large
+    border: 1px solid #c0c6cc
+    border-radius: 3px
+    font-size: 15px
+    line-height: 19px
+    padding: 11px 14px 12px 14px
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.17)
+    @include linear-gradient(#fafafa, #ffffff)
+
+.b-field
+    border: 1px solid #c7c7c7
+    border-radius: 3px
+    padding: 3px 6px 4px 6px
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
+    &:hover
+        border-color: #bacbdb
+    &:focus
+        outline: none
+        border-color: #a4a4a4
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.15)
+
+$browser-control-size: 14px
+
+=browser-control
+    border: 1px solid #a8b2bd
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 0 1px 1px #ffffff
+    @include linear-gradient(#ffffff, #d9ddea)
+
+=browser-control-hover
+    border: 1px solid #949ea8
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 0 1px 1px #ffffff
+    @include linear-gradient(#f4f6fa, #d3d7e4)
+
+=browser-control-active
+    border: 1px solid #879099
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 1px 2px 0 rgba(0, 0, 0, 0.3)
+    @include linear-gradient(#edeff5, #c2c3cc)
+
+=browser-control-checked
+    border: 1px solid #42a497
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 0 1px 1px rgba(255, 255, 255, .6)
+    @include linear-gradient(#d6f7f3, #97c1bb)
+
+=browser-control-checked-hover
+    border: 1px solid #42a497
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 0 1px 1px rgba(255, 255, 255, .6)
+    @include linear-gradient(#c1e6df, #92b2af)
+
+=browser-control-checked-active
+    border: 1px solid #3b9488
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), inset 0 1px 2px 0 rgba(0, 0, 0, 0.3)
+    @include linear-gradient(#c0ebe2, #8fb3ae)
+
+.b-checkbox
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: $browser-control-size
+    height: $browser-control-size
+    bottom: -2px
+
+.b-checkbox__placeholder
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: $browser-control-size
+    height: $browser-control-size
+    box-sizing: border-box
+    line-height: 3px
+    border-radius: 2px
+    +browser-control
+
+.b-checkbox__input
+    position: absolute
+    top: 0
+    left: 0
+    width: $browser-control-size
+    height: $browser-control-size
+    opacity: 0
+    z-index: 2
+    vertical-align: top
+    margin: 0 !important
+    padding: 0 !important
+
+    &:hover + .b-checkbox__placeholder
+        +browser-control-hover
+
+    &:active + .b-checkbox__placeholder
+        +browser-control-active
+
+    &:checked
+
+        + .b-checkbox__placeholder
+            +browser-control-checked
+
+            &:before
+                content: "✔"
+                line-height: 8px
+                font-size: 15px
+                padding-left: 2px
+                color: #12695b
+                text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7)
+
+        &:hover + .b-checkbox__placeholder
+            +browser-control-checked-hover
+            &:before
+                color: #0d4a3f
+
+        &:active + .b-checkbox__placeholder
+            +browser-control-checked-active
+            &:before
+                color: #15584c
+
+.b-switcher
+    line-height: 20px
+
+.b-switcher__control
+    cursor: default
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    height: $browser-control-size
+    width: 25px
+    border-radius: $browser-control-size
+    +browser-control-active
+
+.b-switcher__inner
+    display: block
+    position: absolute
+    width: $browser-control-size
+    height: $browser-control-size
+    border-radius: $browser-control-size
+    left: -1px
+    top: -1px
+    +browser-control
+    @include transition(left, 150ms)
+
+.b-switcher__label
+    display: inline-block
+    vertical-align: text-top
+    cursor: pointer
+    padding: 0 3px
+
+.b-switcher:not(.b-switcher_on)
+    .b-switcher__label_on
+        color: $color-text-gray
+        opacity: 0.5
+
+.b-switcher_on
+    .b-switcher__control
+        +browser-control-checked-active
+        .b-switcher__inner
+            left: 10px
+            +browser-control-checked
+
+    .b-switcher__label_off
+        color: $color-text-gray
+        opacity: 0.5
+
+.b-badge
+    background: $background-badge
+    color: #ffffff
+    border-radius: 2px
+
+.b-icon-round
+    display: inline-block
+    padding-top: 3px
+    font-style: normal
+    font-size: 11px
+    line-height: 12px
+    width: 16px
+    height: 16px
+    border-radius: 16px
+    box-sizing: border-box
+    text-align: center
+    color: #767879
+    cursor: pointer
+    &:hover
+        color: #ffffff
+        background: #919598
+
+.b-icon-round_inverted
+    color: #ffffff
+    background: #919598
+
+.b-icon-round_outline
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.3)
+    &:hover
+        box-shadow: none
+
+.b-icon-round_light
+    background: rgba(0,0,0,.08)
+    &:hover
+        background: #919598
+
+.b-icon-site
+    width: 16px
+    height: 16px
+    display: inline-block
+    background-size: contain
+    background-position: center
+
+.b-icon-site_blogger
+    background-image: url('../img/favicons/blogger.png')
+
+.b-icon-site_brainstorage
+    background-image: url('../img/favicons/brainstorage.png')
+
+.b-icon-site_dribbble
+    background-image: url('../img/favicons/dribbble.png')
+
+.b-icon-site_foursquare
+    background-image: url('../img/favicons/foursquare.png')
+
+.b-icon-site_github
+    background-image: url('../img/favicons/github.png')
+
+.b-icon-site_googleplus
+    background-image: url('../img/favicons/googleplus.png')
+
+.b-icon-site_gravatar
+    background-image: url('../img/favicons/gravatar.png')
+
+.b-icon-site_habrahabr
+    background-image: url('../img/favicons/habrahabr.png')
+
+.b-icon-site_linkedin
+    background-image: url('../img/favicons/linkedin.png')
+
+.b-icon-site_livejournal
+    background-image: url('../img/favicons/livejournal.png')
+
+.b-icon-site_skype
+    background-image: url('../img/favicons/skype.png')
+
+.ui-autocomplete
+    background: #ffffff
+    border: 1px solid #b6bcc2
+    border-radius: 3px
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18)
+    padding: 0
+
+.b-app .ui-menu-item
+    padding: 0
+    margin: 0
+
+.b-app .ui-menu-item > a
+    padding: 3px 10px 2px 10px
+    margin: 0
+    color: $color-text
+    cursor: pointer
+    border: 0
+    border-radius: 0
+    font-family: $font-default
+    font-size: 15px
+    line-height: 22px
+
+.b-app .ui-menu-item > a.ui-state-focus
+    color: $color-text
+    background: #f5f5fa
+    padding: 3px 10px 2px 10px
+    border: 0
+    margin: 0
+
+.b-app .ui-slider
+    height: 13px
+    border: 1px solid #9ba5aa
+    background: transparent
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15)
+    border-radius: 3px
+
+.b-app .ui-slider-range
+    background: #14b9d6
+    height: 13px
+    margin-top: -1px
+    border-style: solid
+    border-color: #0b9fb9
+    border-width: 1px 0
+    border-radius: 0
+
+.b-app .ui-slider-handle
+    width: 5px
+    margin: 1px 0 0 -1px
+    height: 19px
+    border: 0
+    background: #ffffff
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4)
+    border-radius: 1px
+    &:active
+        outline: none
+        background: #ececec
+    &:focus
+        outline: none

@@ -1,0 +1,62 @@
+@charset "utf-8"
+
+@mixin font-face ($name, $filename, $font-weight)
+    font-family: $name
+    src: url("../fonts/" + $filename + ".eot")
+    src: url("../fonts/" + $filename + ".eot?#iefix") format("embedded-opentype")
+    src: url("../fonts/" + $filename + ".woff") format("woff")
+    src: url("../fonts/" + $filename + ".ttf") format("truetype")
+    font-weight: $font-weight
+    font-style: normal
+
+@mixin linear-gradient($top, $bottom)
+    background-color: $top
+    background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom))
+    background-image: -webkit-linear-gradient(top, $top, $bottom)
+    background-image: -moz-linear-gradient(top, $top, $bottom)
+    background-image: -o-linear-gradient(top, $top, $bottom)
+    background-image: linear-gradient(to bottom, $top, $bottom)
+
+@mixin transition($property, $duration)
+    -webkit-transition: $property $duration
+    -moz-transition: $property $duration
+    -ms-transition: $property $duration
+    -o-transition: $property $duration
+    transition: $property $duration
+
+@mixin transform($value)
+    -webkit-transform: $value
+    -moz-transform: $value
+    -ms-transform: $value
+    -o-transform: $value
+    transform: $value
+
+@mixin user-select($value)
+    -webkit-user-select: $value
+    -moz-user-select: $value
+    user-select: $value
+
+@font-face
+    @include font-face("Proxima Nova", ProximaNova-Reg-webfont, normal)
+
+@font-face
+    @include font-face("Proxima Nova", ProximaNova-Bold-webfont, bold)
+
+$color-text: #434445
+$color-text-gray: #7a7d80
+$color-text-light-gray: #afb4b4
+$color-text-green: #15a022
+$color-text-red: #dd6d59
+
+$color-a: #1ea0c8
+$color-a-hover: #1c97bd
+$color-a-active: #1a8bad
+$color-button: #333a46
+
+$background-badge: #10b9d6
+
+$font-ubuntu: "Ubuntu Mono", Arial, sans-serif
+$font-proxima: "Proxima Nova", sans-serif
+$font-default: "Proxima Nova", sans-serif
+
+$width-app: 1000px

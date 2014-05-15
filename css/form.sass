@@ -1,0 +1,234 @@
+@charset "utf-8"
+@import "base"
+
+$color-value-border: #75bd64
+$color-value-border-red: #bd7164
+$color-operator: #747677
+
+.b-form
+    font-size: 15px
+    line-height: 19px
+    padding: 30px
+    position: relative
+    z-index: 4
+
+.b-form__field
+    padding: 10px
+
+.b-form__query
+    &:before
+        content: attr(data-and)
+        padding-left: 3px
+        color: $color-operator
+    &:first-child
+        &:before
+            display: none
+
+.b-form__key
+    display: inline-block
+
+.b-form__key-title
+    padding: 4px 8px 3px 8px
+    @include transition(width, 200ms)
+
+.b-form__key-dropdown
+    white-space: nowrap
+    margin-top: -1px
+    z-index: 2
+    line-height: 21px
+    padding-top: 2px
+    min-width: 288px
+
+.b-form__key-dropdown-item
+    position: relative
+
+.b-form__key-exclude
+    margin-top: 2px
+    padding: 6px 11px 5px 11px
+
+.b-form__key-exclude-inner
+    margin-right: 3px
+
+.b-form__key-switcher
+    position: absolute
+    right: 10px
+    top: 2px
+
+.b-form__key-switcher-label
+    font-size: 13px
+    line-height: 20px
+
+.b-form__values
+    display: inline-block
+
+.b-form__values-add
+    font-size: 21px
+    line-height: 20px
+    padding-top: 1px
+    vertical-align: text-top
+    position: relative
+    bottom: -1px
+    margin-left: 8px
+    color: $color-text-gray
+    cursor: pointer
+
+.b-form__value
+    display: inline-block
+    position: relative
+    &:before
+        content: attr(data-or)
+        padding-left: 10px
+        color: $color-operator
+    &:first-child
+        &:before
+            display: none
+
+.b-form__value-input-remove-outer
+    display: none
+    width: 26px
+    height: 28px
+    vertical-align: top
+    position: relative
+    left: -6px
+    z-index: 1
+
+.b-form__value-remove
+    position: absolute
+    height: 100%
+    width: 100%
+    border-style: solid
+    border-color: $color-value-border
+    border-width: 1px 1px 1px 0
+    border-radius: 0 2px 2px 0
+    right: 0
+
+.b-form__value-remove-inner
+    line-height: 17px
+    margin-top: 4px
+    padding: 0
+    width: 18px
+    height: 18px
+
+.b-form__value-input-outer:not(.b-form__value-input-outer_editing)
+    &:hover
+        .b-form__value-input
+            border: 1px solid $color-value-border
+            border-right-color: transparent
+        .b-form__value-input-remove-outer
+            display: inline-block
+            margin-right: -10px
+        + .b-form__value-synonyms
+            display: none
+
+.b-form__value-input-outer_editing + .b-form__value-synonyms
+    visibility: hidden
+    margin-left: -25px
+
+.b-form__value-input
+    font-size: 15px
+    line-height: 19px
+    padding: 4px 8px 3px 8px
+    border: 1px solid transparent
+    width: 90px
+    color: $color-text-green
+    border-radius: 2px
+    background: transparent
+    @include transition(width, 200ms)
+    &:focus
+        outline: none
+
+.b-form__value-input_fake
+    font-size: 15px
+    line-height: 19px
+    position: absolute
+    top: -1000px
+    left: -1000px
+
+$width-input-editing: 120px
+
+.b-form__value-input-outer_editing .b-form__value-input
+    width: $width-input-editing !important
+    border-color: #67705a
+    border-bottom-color: #7b8272
+    color: #ffffff
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3)
+    @include linear-gradient(#98ba69, #aacb7a)
+    &:focus
+        outline: none
+
+.b-form__value-suggest
+    min-width: $width-input-editing
+    line-height: 22px
+
+.b-form__value-synonyms
+    display: inline-block
+    margin-left: -4px
+    @include transition(margin-left, 200ms)
+
+.b-form__value-synonyms-count
+    font-size: 10px
+    line-height: 15px
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    background: #cee4b0
+    border-radius: 2px
+    padding: 1px 4px 0 4px
+
+.b-form__value-synonyms-dropdown
+    left: -10px
+    margin-top: 5px
+    font-size: 13px
+
+.b-form__find
+    padding: 1px 30px 0 30px
+    line-height: 44px
+    font-size: 19px
+    font-weight: bold
+    float: right
+    margin-top: 30px
+    border-radius: 4px
+
+.b-form__find_small
+    display: none
+    border-radius: 0 0 3px 3px
+    padding: 0 28px
+    margin-top: -1px
+    float: right
+    line-height: 25px
+
+.b-form_collapsed
+    padding-bottom: 20px
+    border-bottom: 1px solid #e4e5e7
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05)
+    .b-form__field
+        border-bottom-right-radius: 0
+    .b-form__find_small
+        display: block
+    .b-form__find
+        display: none
+
+.b-form__query_excluded
+
+    .b-form__value-input
+        color: $color-text-red
+
+    .b-form__value-synonyms-count
+        background: #f1b3b3
+
+    .b-form__value-remove
+        border-color: $color-value-border-red
+
+    .b-form__value-input-outer:not(.b-form__value-input-outer_editing)
+        &:hover
+            .b-form__value-input
+                border-color: $color-value-border-red
+                border-right-color: transparent
+
+    .b-form__value-input-outer_editing .b-form__value-input
+        border-color: #505050
+        border-bottom-color: #6a6a6a
+        color: #ffffff
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)
+        @include linear-gradient(#c67263, #d78374)
+

@@ -1,0 +1,10 @@
+{
+    "name": "AmazingHiring",
+    "dependencies": {
+        "jquery": null,
+        "jqueryui": null,
+        "underscore": null,
+        "backbone": null,
+        "bootstrap": null
+    }
+}

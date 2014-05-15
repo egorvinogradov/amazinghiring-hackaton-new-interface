@@ -1,0 +1,358 @@
+@charset "utf-8"
+@import "base"
+
+.b-profile
+    font-size: 13px
+    line-height: 18px
+
+.b-profile-short
+    border: 1px solid #c0c6cc
+    border-radius: 3px
+    box-shadow: 0 1px 1px rgba(70, 160, 155, 0.2)
+    position: relative
+    margin-bottom: 20px
+
+.b-profile__short-side
+    float: left
+    width: 140px
+    padding: 20px
+
+.b-profile__photo
+    width: 100px
+    height: 100px
+    background-size: cover
+    background-position: center
+    cursor: pointer
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15)
+
+.b-profile__short-main
+    overflow: hidden
+    padding: 19px 10px 15px 0
+
+.b-profile__name
+    font-size: 17px
+    font-weight: bold
+
+
+.b-profile__position
+    padding: 5px 0 10px 0
+
+.b-profile__age
+    color: $color-text-gray
+    font-weight: normal
+    font-size: 13px
+    padding-left: 10px
+
+.b-profile__age-approximate
+    font-size: 11px
+    font-family: Arial, sans-serif
+    position: relative
+    top: 1px
+    &:before
+        content: "~"
+        position: absolute
+        top: -6px
+
+.b-profile__age-dropdown
+    margin-left: 3px
+    z-index: 4
+
+.b-profile__age-dropdown-block
+    left: -11px
+    margin-top: 8px
+
+.b-profile__age-dropdown-text
+    white-space: nowrap
+    color: $color-text
+    padding: 6px 8px
+    line-height: 16px
+
+.b-profile__location
+    color: $color-text-gray
+    position: absolute
+    right: 20px
+    top: 18px
+
+.b-profile__short-experience
+    padding-top: 8px
+
+.b-profile__short-experience-title
+    color: $color-text-gray
+
+.b-profile__short-experience-dropdown
+    z-index: 3
+
+.b-profile__short-experience-dropdown-block
+    margin-top: 4px
+    left: -7px
+
+.b-profile__short-education
+    padding-top: 8px
+    display: inline-block
+
+.b-profile__links
+    padding-top: 6px
+
+.b-profile__links_short
+    width: 295px
+
+.b-profile__links-item
+    margin: 4px 8px 3px 0
+    display: inline-block
+    vertical-align: top
+    line-height: 16px
+
+.b-profile__links-item_hidden
+    display: none
+
+.b-profile__links_expanded
+    .b-profile__links-item_hidden
+        display: inline-block
+    .b-profile__links-more
+        display: none
+
+.b-profile__links_short.b-profile__links_expanded
+    width: 285px
+
+.b-profile__short-buttons
+    position: absolute
+    right: 20px
+    bottom: 19px
+
+.b-profile__short-button_preview
+    margin-right: 6px
+
+.b-profile__short-button
+    line-height: 22px
+    padding: 0 8px
+    font-size: 14px
+    border-radius: 3px
+
+.b-profile__short-button_open
+    box-shadow: 0 2px 2px rgba(15, 150, 135, 0.3), inset 0 1px 0 rgba(255, 255, 255, .25)
+
+.b-profile-preview
+    position: fixed
+    z-index: 11
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow-y: scroll
+
+.b-profile-preview__bg
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(255,255,255,.8)
+
+.b-profile-preview__container
+    background: #ffffff
+    border: 1px solid #b6bcc2
+    border-radius: 3px
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.18)
+    width: $width-app + 40px
+    top: 30px
+    margin-bottom: 30px
+    left: 50%
+    margin-left: - ($width-app + 20px) / 2
+    position: relative
+    min-height: 400px
+
+.b-profile-preview__close
+    position: absolute
+    right: 14px
+    top: 19px
+    color: $color-text-gray
+    font-size: 12px
+    cursor: pointer
+    &:hover
+        .b-profile-preview__close-icon
+            color: #ffffff
+            background: #919598
+
+.b-profile-preview__close-icon
+    padding-top: 3px
+    width: 18px
+    height: 18px
+
+.b-profile__main
+    float: left
+    width: 720px
+
+.b-profile__summary
+    position: relative
+
+.b-profile__summary-side
+    float: left
+    width: 140px
+    padding: 20px
+
+.b-profile__summary-main
+    overflow: hidden
+    padding: 19px 10px 0 0
+
+.b-profile__contacts
+    margin: 0
+    padding-bottom: 6px
+
+.b-profile__contacts-title
+    color: $color-text-gray
+    font-weight: normal
+    float: left
+    width: 65px
+    line-height: 20px
+
+.b-profile__contacts-contact
+    line-height: 20px
+
+.b-profile__contacts-dropdown
+    margin-left: 3px
+
+.b-profile__contacts-dropdown-block
+    left: -11px
+    margin-top: 5px
+
+.b-profile__contacts-dropdown-text
+    padding: 6px 8px
+    white-space: nowrap
+    line-height: 17px
+
+.b-profile__details
+    border-top: 1px solid #e1e6eb
+    margin: 6px 20px 20px 20px
+    padding-top: 30px
+
+.b-profile__details-block
+    padding: 0 0 30px 120px
+
+.b-profile__details-block-name
+    color: $color-text-light-gray
+    margin-left: -118px
+    width: 100px
+    text-align: right
+    position: absolute
+
+.b-profile__skills-item
+    line-height: 20px
+
+.b-profile__skills-rating
+    display: block
+    float: left
+    width: 100px
+
+.b-profile__skills-rating-star
+    color: #ecaf1e
+
+.b-profile__skills-rating-star_empty
+    color: #d0d7d7
+
+.b-profile__skills-name
+    display: block
+    float: left
+    width: 80px
+    font-weight: bold
+
+.b-profile__skills-details
+    text-transform: capitalize
+    display: block
+    overflow: hidden
+    color: $color-text-gray
+
+.b-profile__experience,
+.b-profile__education
+    line-height: 20px
+
+.b-profile__experience-period,
+.b-profile__education-period
+    font-size: 11px
+
+.b-profile__experience-company,
+.b-profile__education-company
+    font-weight: bold
+
+.b-profile__experience-time,
+.b-profile__education-time
+    color: $color-text-gray
+
+.b-profile__side
+    float: left
+    width: 300px
+    padding: 53px 0 20px 0
+
+.b-profile__add-comment
+    padding-bottom: 18px
+
+.b-profile__add-comment-textarea
+    width: 100%
+    height: 27px
+    min-height: 27px
+    margin: 0 0 -1px 0
+    display: block
+    @include transition(height, 250ms)
+    resize: none
+
+.b-profile__add-comment-button
+    line-height: 22px
+    border-radius: 0 0 2px 2px
+    float: right
+    display: none
+
+.b-profile__add-comment-textarea_focused
+    height: 80px
+    border-bottom-right-radius: 0
+    resize: vertical
+
+    + .b-profile__add-comment-button
+        display: inline-block
+
+.b-profile__comments-item
+    padding-bottom: 17px
+    position: relative
+
+.b-profile__comments-name
+    font-weight: bold
+    padding-bottom: 2px
+
+.b-profile__comments-date
+    color: $color-text-light-gray
+    padding-left: 7px
+    font-weight: normal
+    display: inline-block
+    font-size: 11px
+
+.b-profile__comments-dropdown
+    font-weight: normal
+    display: inline-block
+
+.b-profile__comments-dropdown-title
+    opacity: 0.35
+    margin-left: 7px
+    cursor: pointer
+
+.b-profile__comments-dropdown-block
+    right: -15px
+    margin-top: 4px
+
+.b-profile__comments-item_hidden
+    display: none
+
+.b-profile__comments_expanded
+    .b-profile__comments-more
+        display: none
+    .b-profile__comments-item_hidden
+        display: block
+
+.b-profile__comments-more-button
+    line-height: 25px
+    width: 100%
+    text-align: center
+
+.b-profile__comments-more-badge
+    font-size: 12px
+    padding: 1px 5px 0 5px
+    line-height: 15px
+    margin-left: 5px
+    display: inline-block
