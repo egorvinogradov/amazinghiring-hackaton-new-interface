@@ -8,36 +8,99 @@ $color-operator: #747677
 .b-form
     font-size: 15px
     line-height: 19px
-    padding: 30px
+    padding: 0 15px 30px 15px
     position: relative
     z-index: 4
 
-.b-form__field
-    padding: 10px
-
 .b-form__query
+    display: none
+    border-bottom-right-radius: 0
+    margin: 30px 15px 0 15px
+
+.b-form__query-change
+    display: none
+    border-radius: 0 0 3px 3px
+    padding: 0 15px
+    margin-top: -1px
+    float: right
+    line-height: 25px
+    margin-right: 10px
+
+.b-form__query-item
+    color: $color-text-green
     &:before
-        content: attr(data-and)
-        padding-left: 3px
-        color: $color-operator
+        content: "•"
+        padding: 0 7px 0 4px
+        color: $color-text-gray
     &:first-child
         &:before
             display: none
+
+.b-form__query-item_excluded
+    color: $color-text-red
+
+.b-form__row-remove
+    display: none
+    position: absolute
+    padding: 0 5px
+    font-size: 21px
+    line-height: 22px
+    top: 50%
+    margin-top: -11px
+    right: 9px
+    cursor: pointer
+    color: $color-text-gray
+    &:hover
+        color: $color-text
+
+.b-form__row
+    position: relative
+    padding: 16px 33px 16px 6px
+    border-bottom: 1px solid #e4e5e7
+    //line-height: 39px
+    &:hover
+        .b-form__row-remove
+            display: block
 
 .b-form__key
     display: inline-block
 
 .b-form__key-title
+    display: inline-block
     padding: 4px 8px 3px 8px
-    @include transition(width, 200ms)
+    border: 1px solid transparent
+    cursor: pointer
+    color: $color-button
+    border-radius: 3px
+    &:hover
+        color: $color-button
+        border-color: #b6bcc2
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12)
+        @include linear-gradient(#faf9f9, #e4e5e8)
+    &:active
+        color: $color-button
+        border-color: #b6bcc2
+        outline: none
+        box-shadow: none
+        @include linear-gradient(#f0eff0, #dcdddf)
+    &:focus
+        outline: none
 
 .b-form__key-dropdown
     white-space: nowrap
-    margin-top: -1px
+    margin-top: 27px
     z-index: 2
     line-height: 21px
     padding-top: 2px
     min-width: 288px
+
+    &:not(.m-hidden)
+        + .b-form__key-title
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+
+.b-form__key-title-caret
+    opacity: 0.5
 
 .b-form__key-dropdown-item
     position: relative
@@ -59,25 +122,28 @@ $color-operator: #747677
     line-height: 20px
 
 .b-form__values
-    display: inline-block
+    display: inline
 
 .b-form__values-add
-    font-size: 21px
+    font-size: 26px
     line-height: 20px
     padding-top: 1px
     vertical-align: text-top
     position: relative
     bottom: -1px
     margin-left: 8px
-    color: $color-text-gray
     cursor: pointer
+    color: $color-text-gray
+    &:hover
+        color: $color-text
 
 .b-form__value
     display: inline-block
     position: relative
+    padding-right: 5px
     &:before
         content: attr(data-or)
-        padding-left: 10px
+        padding-left: 8px
         color: $color-operator
     &:first-child
         &:before
@@ -156,10 +222,6 @@ $width-input-editing: 120px
     &:focus
         outline: none
 
-.b-form__value-suggest
-    min-width: $width-input-editing
-    line-height: 22px
-
 .b-form__value-synonyms
     display: inline-block
     margin-left: -4px
@@ -179,6 +241,7 @@ $width-input-editing: 120px
     left: -10px
     margin-top: 5px
     font-size: 13px
+    z-index: 2
 
 .b-form__find
     padding: 1px 30px 0 30px
@@ -186,14 +249,14 @@ $width-input-editing: 120px
     font-size: 19px
     font-weight: bold
     float: right
-    margin-top: 30px
+    margin: 30px 15px 0 0
     border-radius: 4px
 
 .b-form__find_small
     display: none
     border-radius: 0 0 3px 3px
     padding: 0 28px
-    margin-top: -1px
+    margin: -1px 15px 0 0
     float: right
     line-height: 25px
 
@@ -201,14 +264,20 @@ $width-input-editing: 120px
     padding-bottom: 20px
     border-bottom: 1px solid #e4e5e7
     box-shadow: 0 1px 2px rgba(0, 0, 0, .05)
-    .b-form__field
-        border-bottom-right-radius: 0
-    .b-form__find_small
-        display: block
+    .b-form__rows
+        display: none
+    .b-form__rows-add
+        display: none
     .b-form__find
         display: none
+    .b-form__find_small
+        display: block
+    .b-form__query
+        display: block
+    .b-form__query-change
+        display: block
 
-.b-form__query_excluded
+.b-form__row_excluded
 
     .b-form__value-input
         color: $color-text-red
@@ -232,3 +301,18 @@ $width-input-editing: 120px
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2)
         @include linear-gradient(#c67263, #d78374)
 
+.b-form__rows-add
+    position: relative
+    line-height: 26px
+    padding: 0 9px 0 24px
+    margin-left: 15px
+    margin-top: 30px
+
+.b-form__rows-add-icon
+    font-size: 18px
+    font-weight: bold
+    position: absolute
+    line-height: 28px
+    top: 0
+    left: 10px
+    color: $color-text-gray

@@ -83,218 +83,506 @@
 
                     <div class="b-form clearfix b-form_collapsed-">
 
-                        <div class="b-form__field b-field-large">
+                        <div class="b-form__rows">
 
-                            <div class="b-form__query" data-and="и">
+                            <div class="b-form__row">
 
-                            <div class="b-form__key b-dropdown">
+                                <div class="b-form__key b-dropdown">
 
-                                <span class="b-form__key-title b-button b-dropdown__title">
-                                    <span class="b-form__key-title-inner">
-                                        Ключевое слово
+                                    <div class="b-form__key-dropdown b-dropdown__block m-hidden">
+                                        <ul class="b-dropdown__list">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Ключевое слово
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Компания
+                                                </span>
+                                                <span class="b-form__key-switcher b-switcher" data-value="off">
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_off">любая</span>
+                                                    <span class="b-switcher__control">
+                                                        <span class="b-switcher__inner"></span>
+                                                    </span>
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_on">текущая</span>
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Навык
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Должность
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Местоположение
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Образование
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Имя или никнейм
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-exclude b-form__key-dropdown-item b-dropdown__item b-dropdown__item_separate">
+                                                <label>
+                                                    <span class="b-form__key-exclude-inner b-checkbox">
+                                                        <input class="b-form__key-exclude-checkbox b-checkbox__input" type="checkbox">
+                                                        <span class="b-checkbox__placeholder"></span>
+                                                    </span>
+                                                    Исключить из поиска
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <span class="b-form__key-title b-dropdown__title">
+                                        <span class="b-form__key-title-inner">
+                                            Ключевое слово
+                                        </span>
+                                        <span class="b-form__key-title-caret caret"></span>
                                     </span>
-                                    <span class="caret"></span>
-                                </span>
 
-                                <div class="b-form__key-dropdown b-dropdown__block m-hidden">
-                                    <ul class="b-dropdown__list">
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Ключевое слово
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Компания
-                                            </span>
-                                            <span class="b-form__key-switcher b-switcher" data-value="off">
-                                                <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_off">любая</span>
-                                                <span class="b-switcher__control">
-                                                    <span class="b-switcher__inner"></span>
-                                                </span>
-                                                <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_on">текущая</span>
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Навык
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Должность
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Местоположение
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Образование
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-dropdown-item b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                Имя или никнейм
-                                            </span>
-                                        </li>
-                                        <li class="b-form__key-exclude b-form__key-dropdown-item b-dropdown__item b-dropdown__item_separate">
-                                            <label>
-                                                <span class="b-form__key-exclude-inner b-checkbox">
-                                                    <input class="b-form__key-exclude-checkbox b-checkbox__input" type="checkbox">
-                                                    <span class="b-checkbox__placeholder"></span>
-                                                </span>
-                                                Исключить из поиска
-                                            </label>
-                                        </li>
-                                    </ul>
                                 </div>
+
+                                <div class="b-form__values">
+
+                                    <div class="b-form__value" data-or="или">
+
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="javascript">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
+                                            </span>
+                                        </span>
+
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        python
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        java
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        c++
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                    </div>
+
+                                    <div class="b-form__value" data-or="или">
+
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="python">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
+                                            </span>
+                                        </span>
+
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        python
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        java
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        c++
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                    </div>
+
+                                    <span class="b-form__values-add">+</span>
+
+                                </div>
+
+                                <span class="b-form__row-remove">&times;</span>
+
                             </div>
 
-                            <div class="b-form__values">
+                            <div class="b-form__row b-form__row_excluded">
 
-                                <div class="b-form__value" data-or="или">
+                                <div class="b-form__key b-dropdown">
 
-                                    <span class="b-form__value-input-outer">
-                                        <span class="b-form__value-input_fake"></span>
-                                        <input class="b-form__value-input" value="javascript">
-
-                                        <span class="b-form__value-input-remove-outer">
-                                            <span class="b-form__value-remove">
-                                                <span class="b-form__value-remove-inner b-icon-round">&times;</span>
-                                            </span>
-                                        </span>
-                                    </span>
-
-                                    <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
-                                        <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
-                                        <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
-                                            <li class="b-dropdown__corner b-dropdown__corner_left"></li>
-                                            <li class="b-dropdown__item b-dropdown__item_title">
+                                    <div class="b-form__key-dropdown b-dropdown__block m-hidden">
+                                        <ul class="b-dropdown__list">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
                                                 <span class="b-dropdown__item-inner">
-                                                    Синонимы
+                                                    Ключевое слово
                                                 </span>
                                             </li>
-                                            <li class="b-dropdown__item">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
                                                 <span class="b-dropdown__item-inner">
-                                                    python
+                                                    Компания
+                                                </span>
+                                                <span class="b-form__key-switcher b-switcher" data-value="off">
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_off">любая</span>
+                                                    <span class="b-switcher__control">
+                                                        <span class="b-switcher__inner"></span>
+                                                    </span>
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_on">текущая</span>
                                                 </span>
                                             </li>
-                                            <li class="b-dropdown__item">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
                                                 <span class="b-dropdown__item-inner">
-                                                    java
+                                                    Навык
                                                 </span>
                                             </li>
-                                            <li class="b-dropdown__item">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
                                                 <span class="b-dropdown__item-inner">
-                                                    c++
+                                                    Должность
                                                 </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Местоположение
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Образование
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Имя или никнейм
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-exclude b-form__key-dropdown-item b-dropdown__item b-dropdown__item_separate">
+                                                <label>
+                                                    <span class="b-form__key-exclude-inner b-checkbox">
+                                                        <input class="b-form__key-exclude-checkbox b-checkbox__input" type="checkbox">
+                                                        <span class="b-checkbox__placeholder"></span>
+                                                    </span>
+                                                    Исключить из поиска
+                                                </label>
                                             </li>
                                         </ul>
-                                    </span>
+                                    </div>
 
-                                    <ul class="b-form__value-suggest b-dropdown__block m-hidden">
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                javascript
-                                            </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                python
-                                            </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                java
-                                            </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                c++
-                                            </span>
-                                        </li>
-                                    </ul>
+                                    <span class="b-form__key-title b-dropdown__title">
+                                        <span class="b-form__key-title-inner">
+                                            Должность
+                                        </span>
+                                        <span class="b-form__key-title-caret caret"></span>
+                                    </span>
 
                                 </div>
 
-                                <div class="b-form__value" data-or="или">
+                                <div class="b-form__values">
 
-                                    <span class="b-form__value-input-outer">
-                                        <span class="b-form__value-input_fake"></span>
-                                        <input class="b-form__value-input" value="python">
+                                    <div class="b-form__value" data-or="или">
 
-                                        <span class="b-form__value-input-remove-outer">
-                                            <span class="b-form__value-remove">
-                                                <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="рекрутер">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
                                             </span>
                                         </span>
-                                    </span>
 
-                                    <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
-                                        <span class="b-form__value-synonyms-count b-dropdown__title">23</span>
-                                        <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
-                                            <li class="b-dropdown__corner b-dropdown__corner_left"></li>
-                                            <li class="b-dropdown__item b-dropdown__item_title">
-                                                <span class="b-dropdown__item-inner">
-                                                    Синонимы
-                                                </span>
-                                            </li>
-                                            <li class="b-dropdown__item">
-                                                <span class="b-dropdown__item-inner">
-                                                    python
-                                                </span>
-                                            </li>
-                                            <li class="b-dropdown__item">
-                                                <span class="b-dropdown__item-inner">
-                                                    java
-                                                </span>
-                                            </li>
-                                            <li class="b-dropdown__item">
-                                                <span class="b-dropdown__item-inner">
-                                                    c++
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </span>
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">3</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        python
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        java
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        c++
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
 
-                                    <ul class="b-form__value-suggest b-dropdown__block m-hidden">
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                javascript
+                                    </div>
+
+                                    <div class="b-form__value" data-or="или">
+
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="менеджер">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
                                             </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                python
-                                            </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                java
-                                            </span>
-                                        </li>
-                                        <li class="b-dropdown__item">
-                                            <span class="b-dropdown__item-inner">
-                                                c++
-                                            </span>
-                                        </li>
-                                    </ul>
+                                        </span>
+
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">5</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        python
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        java
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        c++
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                    </div>
+
+                                    <span class="b-form__values-add">+</span>
 
                                 </div>
 
-                                <span class="b-form__values-add">+</span>
+                                <span class="b-form__row-remove">&times;</span>
 
+                            </div>
+
+                            <div class="b-form__row">
+
+                                <div class="b-form__key b-dropdown">
+
+                                    <div class="b-form__key-dropdown b-dropdown__block m-hidden">
+                                        <ul class="b-dropdown__list">
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Ключевое слово
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Компания
+                                                </span>
+                                                <span class="b-form__key-switcher b-switcher" data-value="off">
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_off">любая</span>
+                                                    <span class="b-switcher__control">
+                                                        <span class="b-switcher__inner"></span>
+                                                    </span>
+                                                    <span class="b-form__key-switcher-label b-switcher__label b-switcher__label_on">текущая</span>
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Навык
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Должность
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Местоположение
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Образование
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-dropdown-item b-dropdown__item">
+                                                <span class="b-dropdown__item-inner">
+                                                    Имя или никнейм
+                                                </span>
+                                            </li>
+                                            <li class="b-form__key-exclude b-form__key-dropdown-item b-dropdown__item b-dropdown__item_separate">
+                                                <label>
+                                                    <span class="b-form__key-exclude-inner b-checkbox">
+                                                        <input class="b-form__key-exclude-checkbox b-checkbox__input" type="checkbox">
+                                                        <span class="b-checkbox__placeholder"></span>
+                                                    </span>
+                                                    Исключить из поиска
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <span class="b-form__key-title b-dropdown__title">
+                                        <span class="b-form__key-title-inner">
+                                            Местоположение
+                                        </span>
+                                        <span class="b-form__key-title-caret caret"></span>
+                                    </span>
+
+                                </div>
+
+                                <div class="b-form__values">
+
+                                    <div class="b-form__value" data-or="или">
+
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="Москва">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
+                                            </span>
+                                        </span>
+
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">2</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Default city
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Нерезиновая
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                    </div>
+
+                                    <div class="b-form__value" data-or="или">
+
+                                        <span class="b-form__value-input-outer">
+                                            <span class="b-form__value-input_fake"></span>
+                                            <input class="b-form__value-input" value="Санкт-Петербург">
+
+                                            <span class="b-form__value-input-remove-outer">
+                                                <span class="b-form__value-remove">
+                                                    <span class="b-form__value-remove-inner b-icon-round">&times;</span>
+                                                </span>
+                                            </span>
+                                        </span>
+
+                                        <span class="b-form__value-synonyms b-dropdown b-dropdown_static">
+                                            <span class="b-form__value-synonyms-count b-dropdown__title">2</span>
+                                            <ul class="b-form__value-synonyms-dropdown b-dropdown__block m-hidden">
+                                                <li class="b-dropdown__corner b-dropdown__corner_left"></li>
+                                                <li class="b-dropdown__item b-dropdown__item_title">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Синонимы
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Питер
+                                                    </span>
+                                                </li>
+                                                <li class="b-dropdown__item">
+                                                    <span class="b-dropdown__item-inner">
+                                                        Ленинград
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                    </div>
+
+                                    <span class="b-form__values-add">+</span>
+
+                                </div>
+
+                                <span class="b-form__row-remove">&times;</span>
 
                             </div>
 
                         </div>
 
+                        <div class="b-form__query b-field-large">
+                            <span class="b-form__query-item">Javascript</span>
+                            <span class="b-form__query-item">Python</span>
+                            <span class="b-form__query-item b-form__query-item_excluded">Рекрутер</span>
+                            <span class="b-form__query-item b-form__query-item_excluded">Менеджер</span>
+                            <span class="b-form__query-item">Москва</span>
+                            <span class="b-form__query-item">Санкт-Петербург</span>
                         </div>
+
+                        <button class="b-form__rows-add b-button">
+                            <span class="b-form__rows-add-icon">+</span>
+                            Добавить строку
+                        </button>
 
                         <button class="b-form__find_small b-button">Найти</button>
+                        <button class="b-form__query-change b-button">Изменить запрос</button>
+
                         <button class="b-form__find b-button-green">Найти</button>
 
                     </div>

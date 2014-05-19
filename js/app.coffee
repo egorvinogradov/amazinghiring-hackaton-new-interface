@@ -133,14 +133,18 @@ $("body").delegate ".b-form__value-input", "focus", (e) =>
 $("body").delegate ".b-form__value-input", "blur", (e) =>
     fixInputWidth $(e.currentTarget)
 
-fixInputWidth = (input) ->
-    fake = input.siblings(".b-form__value-input_fake")
-    input
-        .parents(".b-form__value-input-outer")
-        .removeClass("b-form__value-input-outer_editing")
-    fake.text(input.val())
-    width = fake.width()
-    input.width(width)
+fixInputWidth = (inputs) ->
+    inputs.each (i, input) ->
+        input = $(input)
+        fake = input.siblings(".b-form__value-input_fake")
+        value = input.val().trim()
+        if value
+            fake.text(value)
+            input
+                .parents(".b-form__value-input-outer")
+                .removeClass("b-form__value-input-outer_editing")
+            width = fake.width()
+            input.width(width)
 
 fixInputWidth $(".b-form__value-input")
 
@@ -173,7 +177,8 @@ $("body").delegate ".b-form__key-dropdown-item .b-switcher", "click", (e) =>
 
 $("body").delegate ".b-form__values-add", "click", (e) =>
     el = $(e.currentTarget).prev(".b-form__value")
-    el.after("<div class='b-form__value' data-or='или'>" + el.html() + "</div>")
+    html = el.get(0).outerHTML
+    el.after(html)
     fixInputWidth $(".b-form__value-input")
 
 $("body").delegate ".b-form__value-remove", "click", (e) =>
@@ -218,11 +223,11 @@ $(".b-form__value-input").autocomplete
 
 $(".b-form__key-exclude-checkbox").on "change", (e) =>
     checkbox = $(e.currentTarget)
-    query = checkbox.parents(".b-form__query")
+    query = checkbox.parents(".b-form__row")
     if checkbox.is(":checked")
-        query.addClass("b-form__query_excluded")
+        query.addClass("b-form__row_excluded")
     else
-        query.removeClass("b-form__query_excluded")
+        query.removeClass("b-form__row_excluded")
 
 $(".b-filter__range").eq(0).slider
     range: true
@@ -360,3 +365,31 @@ $("body").delegate ".b-search__more", "click", (e) =>
 
 $("body").delegate ".b-form__value-remove", "click", (e) =>
     $(e.currentTarget).parents(".b-form__value").remove()
+
+$("body").delegate ".b-form__row-remove", "click", (e) =>
+    $(e.currentTarget).parents(".b-form__row").remove()
+
+$("body").delegate ".b-form__rows-add", "click", (e) =>
+    row = $(".b-form__row")
+        .first()
+        .clone()
+    value = row
+        .find(".b-form__value")
+        .first()
+        .clone()
+    #value.find(".b-form__value-input").val("")
+    row
+        .find(".b-form__values")
+        .empty()
+        .append(value)
+        .append('<span class="b-form__values-add">+</span>')
+        .find(".b-form__value-input")
+        .val("")
+    $(".b-form__rows").append(row)
+    setTimeout ->
+        row
+            .find(".b-form__value-input-outer")
+            .addClass("b-form__value-input-outer_editing")
+            .find(".b-form__value-input")
+            .focus()
+
