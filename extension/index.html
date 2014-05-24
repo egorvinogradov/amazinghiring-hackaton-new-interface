@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="extension.css">
+</head>
+<body style="background: rgba(0,0,0,.25)">
+
+<div class="ah-extension">
+
+    <div class="ah-panel ah-m-hidden-">
+
+        <div class="ah-header">
+
+            <img class="ah-header__logo" src="img/logo.svg" alt="AmazingHiring">
+            <div class="ah-header__back ah-m-hidden">Назад</div>
+
+            <div class="ah-header__dropdown ah-dropdown">
+                <div class="ah-header__dropdown-title ah-dropdown__title ah-button">
+                    Аккаунт
+                    <span class="ah-header__dropdown-caret ah-caret"></span>
+                </div>
+                <div class="ah-header__dropdown-block ah-dropdown__block ah-m-hidden">
+                    <div class="ah-header__user-name">Егор Виноградов</div>
+                    <div class="ah-header__user-company">AmazingHiring</div>
+                    <ul class="ah-dropdown__list">
+                        <li class="ah-dropdown__item ah-dropdown__item_separate">
+                            <a class="ah-header__dropdown-block-item-inner ah-dropdown__item-inner" href="mailto:support@amazinghiring.com">
+                                Сообщить об ошибке
+                            </a>
+                        </li>
+                        <li class="ah-header__dropdown-block-item-inner ah-dropdown__item">
+                            <a class="ah-header__dropdown-block-item-inner ah-dropdown__item-inner" href="">Выйти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ah-profile ah-m-hidden">
+
+            <div class="ah-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+            <div class="ah-profile__name">Михаил Давыдов</div>
+            <div class="ah-profile__position">Веб-разработчик, Яндекс</div>
+            <div class="ah-profile__location">30 лет, Москва, Россия</div>
+
+            <button class="ah-profile__open-an-button ah-button-green">
+                Открыть в AmazingHiring
+            </button>
+
+            <button class="ah-profile__save-resume-button ah-button" data-alternate-text="Сохранение...">
+                Сохранить <br>
+                просматриваемое <br>
+                резюме в этот профиль
+            </button>
+
+            <div class="ah-profile__save-resume-message ah-m-hidden">
+                Резюме сохранено<br>
+                в <a class="ah-link" href="">профиль кандидата</a>
+            </div>
+
+            <ul class="ah-profile__links">
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_linkedin" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_github" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_habrahabr" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_googleplus" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_gravatar" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_livejournal" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_gravatar" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item ah-profile__links-item_hidden">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item ah-profile__links-item_hidden">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item ah-profile__links-item_hidden">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item ah-profile__links-item_hidden">
+                    <a class="ah-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                </li>
+                <li class="ah-profile__links-item ah-profile__links-more">
+                    <span class="ah-link">4+</span>
+                </li>
+            </ul>
+
+            <ul class="ah-profile__contact">
+                <li class="ah-profile__contact-item ah-profile__contact-item_phone">
+                    <i class="ah-profile__contact-icon ah-fontello-icon-phone"></i>
+                    Телефон на
+                    <a class="ah-profile__contact-item-inner ah-link" href="">Brainstorage</a>
+                </li>
+                <li class="ah-profile__contact-item ah-profile__contact-item_email">
+                    <i class="ah-profile__contact-icon ah-fontello-icon-email"></i>
+                    <a class="ah-profile__contact-item-inner ah-link" href="mailto:topcoder0319@gmail.com">
+                        topcoder0319@gmail.com
+                    </a>
+                </li>
+                <li class="ah-profile__contact-item ah-profile__contact-item_skype">
+                    <i class="ah-profile__contact-icon ah-fontello-icon-skype"></i>
+                    <a class="ah-profile__contact-item-inner ah-link" href="skype:hygaise046323?chat">
+                        hygaise046323
+                    </a>
+                </li>
+                <li class="ah-profile__contact-item ah-profile__contact-item_icq">
+                    <i class="ah-profile__contact-icon ah-fontello-icon-icq"></i>
+                    457567123
+                </li>
+            </ul>
+
+            <div class="ah-profile__add-comment clearfix">
+                <textarea class="ah-profile__add-comment-textarea ah-field" placeholder="Добавить комментарий"></textarea>
+                <button class="ah-profile__add-comment-button ah-button">Добавить комментарий</button>
+            </div>
+
+            <ul class="ah-profile__comments">
+                <li class="ah-profile__comments-item">
+                    <div class="ah-profile__comments-name">
+                        Алексей Иванов
+                        <div class="ah-profile__comments-dropdown ah-dropdown">
+                            <span class="ah-profile__comments-dropdown-title ah-dropdown__title ah-caret"></span>
+                            <div class="ah-profile__comments-dropdown-block ah-dropdown__block ah-m-hidden">
+                                <ul class="ah-dropdown__list">
+                                    <li class="ah-dropdown__corner ah-dropdown__corner_right"></li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Изменить</span>
+                                    </li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Удалить</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ah-profile__comments-date">16 марта</div>
+                    <div class="ah-profile__comments-text">
+                        Общались сегодня по телефону. Сказал, пока работу не ищет, но,
+                        возможно, будет в начале лета. В целом, впечатление хорошее.
+                        Договорились созвониться через пару месяцев.
+                    </div>
+                </li>
+                <li class="ah-profile__comments-more">
+                    <button class="ah-profile__comments-more-button ah-button">
+                        Другие комментарии
+                        <span class="ah-profile__comments-more-badge ah-badge">2</span>
+                    </button>
+                </li>
+                <li class="ah-profile__comments-item ah-profile__comments-item_hidden">
+                    <div class="ah-profile__comments-name">
+                        Юлия Петрова
+                        <div class="ah-profile__comments-dropdown ah-dropdown">
+                            <span class="ah-profile__comments-dropdown-title ah-dropdown__title ah-caret"></span>
+                            <div class="ah-profile__comments-dropdown-block ah-dropdown__block ah-m-hidden">
+                                <ul class="ah-dropdown__list">
+                                    <li class="ah-dropdown__corner ah-dropdown__corner_right"></li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Изменить</span>
+                                    </li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Удалить</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ah-profile__comments-date">20 сентября 2013</div>
+                    <div class="ah-profile__comments-text">
+                        Списавались в Linkedin. Сказал, недавно сменил
+                        работу, и новую не ищет. Попросила порекомендовать
+                        коллег, но пока не ответил.
+                    </div>
+                </li>
+                <li class="ah-profile__comments-item ah-profile__comments-item_hidden">
+                    <div class="ah-profile__comments-name">
+                        Дарья Смирнова
+                        <div class="ah-profile__comments-dropdown ah-dropdown">
+                            <span class="ah-profile__comments-dropdown-title ah-dropdown__title ah-caret"></span>
+                            <div class="ah-profile__comments-dropdown-block ah-dropdown__block ah-m-hidden">
+                                <ul class="ah-dropdown__list">
+                                    <li class="ah-dropdown__corner ah-dropdown__corner_right"></li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Изменить</span>
+                                    </li>
+                                    <li class="ah-dropdown__item">
+                                        <span class="ah-dropdown__item-inner">Удалить</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ah-profile__comments-date">8 июля 2010</div>
+                    <div class="ah-profile__comments-text">
+                        Написала на почту, но ответил, что работу не ищет
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="ah-similar">
+
+            <div class="ah-similar__title">
+                9 похожих профилей
+            </div>
+
+            <div class="ah-similar-profile">
+
+                <div class="ah-similar-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+                <div class="ah-similar-profile__name">Михаил Давыдов</div>
+                <div class="ah-similar-profile__position">Веб-разработчик,</div>
+                <div class="ah-similar-profile__company">Яндекс</div>
+
+                <ul class="ah-similar-profile__links">
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item ah-similar-profile__links-more">4+</li>
+                </ul>
+
+            </div>
+            <div class="ah-similar-profile">
+
+                <div class="ah-similar-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+                <div class="ah-similar-profile__name">Михаил Давыдов</div>
+                <div class="ah-similar-profile__position">Веб-разработчик,</div>
+                <div class="ah-similar-profile__company">Яндекс</div>
+
+                <ul class="ah-similar-profile__links">
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item ah-similar-profile__links-more">4+</li>
+                </ul>
+
+            </div>
+            <div class="ah-similar-profile">
+
+                <div class="ah-similar-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+                <div class="ah-similar-profile__name">Михаил Давыдов</div>
+                <div class="ah-similar-profile__position">Веб-разработчик,</div>
+                <div class="ah-similar-profile__company">Яндекс</div>
+
+                <ul class="ah-similar-profile__links">
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item ah-similar-profile__links-more">4+</li>
+                </ul>
+
+            </div>
+            <div class="ah-similar-profile">
+
+                <div class="ah-similar-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+                <div class="ah-similar-profile__name">Михаил Давыдов</div>
+                <div class="ah-similar-profile__position">Веб-разработчик,</div>
+                <div class="ah-similar-profile__company">Яндекс</div>
+
+                <ul class="ah-similar-profile__links">
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item ah-similar-profile__links-more">4+</li>
+                </ul>
+
+            </div>
+            <div class="ah-similar-profile">
+
+                <div class="ah-similar-profile__photo" style="background-image: url('http://moikrug.ru/avatar/mk-p/572716940/portrait.png?modified=1394131643')"></div>
+
+                <div class="ah-similar-profile__name">Михаил Давыдов</div>
+                <div class="ah-similar-profile__position">Веб-разработчик,</div>
+                <div class="ah-similar-profile__company">Яндекс</div>
+
+                <ul class="ah-similar-profile__links">
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item">
+                        <a class="ah-similar-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+                    </li>
+                    <li class="ah-similar-profile__links-item ah-similar-profile__links-more">4+</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="ah-toggle ah-m-hidden-">
+        <div class="ah-toggle__inner"></div>
+    </div>
+
+    <div class="ah-icons">
+        <ul class="ah-icons__links">
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_linkedin" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_github" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_livejournal" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_gravatar" href="#" target="_blank"></a>
+            </li>
+            <li class="ah-icons__links-item">
+                <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="extension.js"></script>
+
+</body>
+</html>

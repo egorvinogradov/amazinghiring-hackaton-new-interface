@@ -2,3 +2,5 @@
 bower_components
 css/*.css
 js/*.js
+extension/*.js
+extension/*.css
