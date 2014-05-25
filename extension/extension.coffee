@@ -130,5 +130,9 @@ $(".ah-toggle").on "click", ->
 $(".ah-similar-profile").on "click", ->
     $(".ah-profile").removeClass("ah-m-hidden")
     $(".ah-similar").addClass("ah-m-hidden")
+    $(".ah-extension").addClass("ah-extension_back-enabled")
 
-
+$(".ah-header__back, .ah-panel__back").on "click", ->
+    $(".ah-profile").addClass("ah-m-hidden")
+    $(".ah-similar").removeClass("ah-m-hidden")
+    $(".ah-extension").removeClass("ah-extension_back-enabled")

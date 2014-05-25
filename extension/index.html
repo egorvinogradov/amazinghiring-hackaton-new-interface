@@ -8,12 +8,15 @@
 
 <div class="ah-extension">
 
-    <div class="ah-panel ah-m-hidden-">
+    <div class="ah-panel ah-m-hidden">
 
         <div class="ah-header">
 
             <img class="ah-header__logo" src="img/logo.svg" alt="AmazingHiring">
-            <div class="ah-header__back ah-m-hidden">Назад</div>
+            <div class="ah-header__back">
+                <i class="ah-header__back-arrow"></i>
+                К списку
+            </div>
 
             <div class="ah-header__dropdown ah-dropdown">
                 <div class="ah-header__dropdown-title ah-dropdown__title ah-button">
@@ -118,6 +121,13 @@
                 </li>
             </ul>
 
+            <div class="ah-profile__login-message ah-m-hidden">
+                <a class="ah-link" target="_blank" href="#">Войдите</a>, чтобы видеть
+                контакты, навыки, которыми
+                владеет кандидат, и другую
+                информацию.
+            </div>
+
             <ul class="ah-profile__contact">
                 <li class="ah-profile__contact-item ah-profile__contact-item_phone">
                     <i class="ah-profile__contact-icon ah-fontello-icon-phone"></i>
@@ -139,6 +149,49 @@
                 <li class="ah-profile__contact-item ah-profile__contact-item_icq">
                     <i class="ah-profile__contact-icon ah-fontello-icon-icq"></i>
                     457567123
+                </li>
+            </ul>
+
+            <ul class="ah-profile__skills">
+                <li class="ah-profile__skills-item">
+                    <span class="ah-profile__skills-stars">
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                    </span>
+                    <span class="ah-profile__skills-name">python</span>
+                </li>
+                <li class="ah-profile__skills-item">
+                    <span class="ah-profile__skills-stars">
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                    </span>
+                    <span class="ah-profile__skills-name">javascript</span>
+                </li>
+                <li class="ah-profile__skills-item">
+                    <span class="ah-profile__skills-stars">
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                    </span>
+                    <span class="ah-profile__skills-name">ruby</span>
+                </li>
+                <li class="ah-profile__skills-item">
+                    <span class="ah-profile__skills-stars">
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-profile__skills-star_active ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                        <i class="ah-profile__skills-star ah-fontello-icon-star"></i>
+                    </span>
+                    <span class="ah-profile__skills-name">devops</span>
                 </li>
             </ul>
 
@@ -231,7 +284,7 @@
         </div>
 
 
-        <div class="ah-similar">
+        <div class="ah-similar ah-m-hidden-">
 
             <div class="ah-similar__title">
                 9 похожих профилей
@@ -365,49 +418,75 @@
 
         </div>
 
+        <div class="ah-panel__back ah-link">
+            <i class="ah-panel__back-arrow"></i>
+            Назад к списку
+        </div>
+
     </div>
 
-    <div class="ah-toggle ah-m-hidden-">
+    <div class="ah-toggle ah-m-hidden">
         <div class="ah-toggle__inner"></div>
     </div>
 
     <div class="ah-icons">
-        <ul class="ah-icons__links">
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_linkedin" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_github" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_dribbble" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_foursquare" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_blogger" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_livejournal" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_gravatar" href="#" target="_blank"></a>
-            </li>
-            <li class="ah-icons__links-item">
-                <a class="ah-profile__links-link ah-icon-site ah-icon-site_brainstorage" href="#" target="_blank"></a>
-            </li>
-        </ul>
+        <div class="ah-icons__inner">
+            <div class="ah-icons__block">
+                <div class="ah-icons__logo">
+                    <img class="ah-icons__img" src="img/icon.svg">
+                </div>
+                <div class="ah-icons__parameters">
+                    <div class="ah-icons__parameter">
+                        <div class="ah-icons__parameter-inner">
+                            <i class="ah-icons__parameter-icon ah-icons__parameter-icon_comments ah-fontello-icon-comment"></i>
+                            <div class="ah-icons__parameter-count">49</div>
+                        </div>
+                    </div>
+                    <div class="ah-icons__parameter">
+                        <div class="ah-icons__parameter-inner">
+                            <i class="ah-icons__parameter-icon ah-icons__parameter-icon_similar ah-fontello-icon-search"></i>
+                            <div class="ah-icons__parameter-count">9</div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="ah-icons__links">
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_linkedin"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_github"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_brainstorage"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_dribbble"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_foursquare"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_blogger"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_livejournal"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_gravatar"></span>
+                    </li>
+                    <li class="ah-icons__links-item">
+                        <span class="ah-profile__links-icon ah-icon-site ah-icon-site_brainstorage"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </div>
 
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="../bower_components/underscore/underscore.js"></script>
-    <script type="text/javascript" src="extension.js"></script>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/underscore/underscore.js"></script>
+<script type="text/javascript" src="extension.js"></script>
 
 </body>
 </html>
